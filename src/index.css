@@ -49,6 +49,10 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Добавляем новые цвета для нашей игры */
+    --clicker-red: 0 100% 50%;
+    --clicker-green: 120 100% 35%;
   }
 
   .dark {
@@ -97,5 +101,18 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  @keyframes soft-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-soft-pulse {
+    animation: soft-pulse 2s infinite;
   }
 }
